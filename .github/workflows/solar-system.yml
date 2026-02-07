@@ -86,6 +86,13 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
+      - name: docker build
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: false
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/solar-system:${{ github.sha }}
+           
       - name: GHCR Login
         uses: docker/login-action@v2.2.0
         with:
