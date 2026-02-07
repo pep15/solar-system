@@ -1,8 +1,8 @@
 name: Publish Packages to GitGub NPM Registry 
 
 on:
-    release:
-        types: published
+ release:
+    types: [published]
 jobs:
 
     Test_Publish_Package:
