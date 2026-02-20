@@ -149,6 +149,7 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository }}/solar-system:${{ github.sha }}
+
   dev-deploy:
     needs: 
         - docker
