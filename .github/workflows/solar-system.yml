@@ -162,9 +162,16 @@ jobs:
         uses: azure/setup-kubectl@v4
         with:
           version: 'v1.35.0'
-
+      - name: Set Context of Kubconfig
+        uses: azure/k8s-set-context@v4
+        with:
+          method: kubeconfig
+          kubeconfig: ${{secrets.KUBECONFIG}}
+          
       - name: Fetch kuberenetes Cluster Detalis
         run: |
           kubectl version -o yaml
           echo ------------------------------------
           kubectl get nodes
+
+      
