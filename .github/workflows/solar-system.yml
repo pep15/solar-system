@@ -172,7 +172,6 @@ jobs:
           kubectl version -o yaml
           echo ------------------------------------
           kubectl get nodes
-          
 
         
       
