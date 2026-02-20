@@ -160,6 +160,7 @@ jobs:
         uses: azure/setup-kubectl@v4
         with:
           version: 'v1.35.0'
+
       - name: Set Context of Kubconfig
         uses: azure/k8s-set-context@v4
         with:
@@ -173,4 +174,5 @@ jobs:
           kubectl get nodes
           
 
+        
       
