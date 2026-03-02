@@ -143,7 +143,7 @@ jobs:
 
       - name: Container Registry Push github package 
         uses: docker/build-push-action@v4
-        with:
+        with: 
           context: .
           push: true
           tags: ghcr.io/${{ github.repository }}/solar-system:${{ github.sha }}
