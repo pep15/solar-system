@@ -226,12 +226,8 @@ jobs:
           URL: ${{needs.dev-deploy.outputs.APP_INGRESS_URL}}
         run: |
           echo $URL
-          sleep 30
           echo "------------------------------------"
           curl https://$URL/live -s -k | jq -r .status | grep -i live
-          RESPONSE=$(curl https://$URL/live -s -k)
-          echo "Raw Response: $RESPONSE"
-          echo $RESPONSE | jq -r .status | grep -i live
         
 
 
