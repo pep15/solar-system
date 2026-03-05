@@ -17,7 +17,7 @@ spec:
         app: solar-system
     spec:
       containers:
-      - image: __IMAGE__
+      - image: ــIMAGEــ
         imagePullPolicy: Always
         name: solar-system
         ports:
