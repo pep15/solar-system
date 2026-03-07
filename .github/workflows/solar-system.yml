@@ -298,6 +298,7 @@ jobs:
         id: set-ingress-host-address
         run: |
           echo "APP_INGRESS_HOST=$(kubectl -n production get ingress -o jsonpath='{.items[0].spec.tls[0].hosts[0]}')" >> "$GITHUB_OUTPUT"
+
   prod-integration-testing:
     if: github.ref == 'refs/heads/main'
     name: Prod Intergration Testing
