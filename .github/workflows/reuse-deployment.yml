@@ -1,6 +1,12 @@
 name: Deployment - Reuseble workflows
 on:
   workflow_call:
+    secrets:
+      K8s-kubeconfig:
+        required: true
+      mongodb-password:
+        required: true
+      
 
 jobs:
   reuse-deploy:
