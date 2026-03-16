@@ -158,7 +158,7 @@ jobs:
     with:
       mongodb-uri: ${{vars.MONGO_URI}}
       environment: Development
-      k8s-manifest-dir: kubernetes/development
+      k8s-manifest-dir: kubernetes/development/
 
    
   dev-integration-testing:
@@ -186,7 +186,7 @@ jobs:
     with:
       mongodb-uri: ${{vars.MONGO_URI}}
       environment: production
-      k8s-manifest-dir: kubernetes/production
+      k8s-manifest-dir: kubernetes/production/
 
   prod-integration-testing:
     if: github.ref == 'refs/heads/main'
