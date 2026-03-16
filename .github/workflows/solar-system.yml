@@ -193,9 +193,5 @@ jobs:
           sleep 20
           echo "------------------------------------"
           curl https://$URL/live -s -k | jq -r .status | grep -i live
-        
-
-
-        
           
         
